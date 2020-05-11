@@ -43,6 +43,7 @@
 
 ;; the blinking cursor is nothing, but an annoyance
 (blink-cursor-mode -1)
+(toggle-scroll-bar -1)
 
 ;; disable the annoying bell ring
 (setq ring-bell-function 'ignore)
@@ -66,7 +67,7 @@
 ;; more useful frame title, that show either a file or a
 ;; buffer name (if the buffer isn't visiting a file)
 (setq frame-title-format
-      '("" invocation-name " Prelude - " (:eval (if (buffer-file-name)
+      '("" invocation-name "@" system-name " " (:eval (if (buffer-file-name)
                                             (abbreviate-file-name (buffer-file-name))
                                           "%b"))))
 
